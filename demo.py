@@ -1,18 +1,12 @@
 __author__ = 'shazada nawaz'
 
-from monstera import MLObject
+import datetime
+from monstera.examples import *
 
-target_url = ("https://archive.ics.uci.edu/ml/machine-learning-"
-              "databases/undocumented/connectionist-bench/sonar/sonar.all-data")
+from monstera.utils.data import get_market_data
 
-# Instantiate class
-ml = MLObject(target_url)
+symbol = "^FTSE"
+start = datetime.datetime(2014, 1, 1)
+end = datetime.datetime(2014, 1, 27)
 
-# output summary statistics
-ml.summarize()
-
-# split the data into traning and test datasets
-train, test = ml.train_test_split(percentage=0.4)
-
-
-
+get_market_data(symbol=symbol, start=start, end=end )
