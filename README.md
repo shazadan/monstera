@@ -5,11 +5,11 @@ A python library to handle boilerplate machine learning tasks that I encounter.
 
 This library depends on the following:
 <ol>
-1. Python 2.7+
-2. SciPy
-3. NumPy
-4. Pandas
-5. scikit-learn
+<li>Python 2.7+</li>
+<li>SciPy</li>
+<li>NumPy</li>
+<li>Pandas</li>
+<li>scikit-learn</li>
 </ol>
 
 Due to cross-dependency issues associated with the above packages I reccomend
