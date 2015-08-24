@@ -10,7 +10,7 @@ def example1():
     ml = MLObject(target_url)
 
     # output summary statistics
-    ml.summarize()
+    ml.data_summary()
 
 
 

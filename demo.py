@@ -1,12 +1,17 @@
 __author__ = 'shazada nawaz'
 
-import datetime
+from monstera.core import MLObject
 from monstera.examples import *
 
-from monstera.utils.data import get_market_data
 
-symbol = "^FTSE"
-start = datetime.datetime(2014, 1, 1)
-end = datetime.datetime(2014, 1, 27)
+target = [1.5, 2.1, 3.3, -4.7, -2.3, 0.75]
+prediction = [0.5, 1.5, 2.1, -2.2, 0.1, -0.5]
 
-get_market_data(symbol=symbol, start=start, end=end )
+
+target_url = ("https://archive.ics.uci.edu/ml/machine-learning-databases"
+              "/undocumented/connectionist-bench/sonar/sonar.all-data")
+
+ml = MLObject(target_url)
+ml.target = [1.5, 2.1, 3.3, -4.7, -2.3, 0.75]
+ml.prediction = [0.5, 1.5, 2.1, -2.2, 0.1, -0.5]
+ml.model_performance()
