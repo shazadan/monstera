@@ -4,11 +4,13 @@ A python library to handle boilerplate machine learning tasks that I encounter.
 ## Dependencies
 
 This library depends on the following:
+<ol>
 1. Python 2.7+
 2. SciPy
 3. NumPy
 4. Pandas
 5. scikit-learn
+</ol>
 
 Due to cross-dependency issues associated with the above packages I reccomend
 using Anaconda (free) from
