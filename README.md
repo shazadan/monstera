@@ -1,5 +1,5 @@
 # monstera
-A python library to handle boilerplate machine learning tasks
+A python library to handle boilerplate machine learning tasks that I encounter.
 
 ## Dependencies
 
@@ -16,7 +16,7 @@ using Anaconda (free) from
 
 ## Quickstart
 
-The below code snippent gives a high-level overview of how this library works:
+The below code snippet gives a high-level overview of how this library works:
 
 <pre>
 # import machine learning object
