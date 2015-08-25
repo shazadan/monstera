@@ -31,6 +31,10 @@ class MLObject:
         print(summary)
 
     def model_performance(self):
+        self._regression_performance()
+
+
+    def _regression_performance(self):
 
         error = []
 
@@ -58,11 +62,20 @@ class MLObject:
         target_variance = sum(target_deviation) / len(target_deviation)
         target_std_dev = sqrt(target_variance)
 
-        print("MSE: ", mse)
-        print("RMSE: ", rmse)
-        print("MAE: ", mae)
-        print("Target Variance: ", target_variance)
-        print("Target Standard Deviation: ", target_std_dev)
+        print "MSE: ", round(mse,4)
+        print "Target Variance (TV): ", round(target_variance, 4)
+        print
+        print "MAE: ", round(mae, 4)
+        print "RMSE: ", round(rmse,4)
+        print "Target Standard Deviation (TSD): ", round(target_std_dev, 4)
+        print
+        if rmse < target_std_dev:
+            print "Prediction model performing well (RMSE < TSD)"
+        else:
+            print "Prediction model not performing well (RMSE >= TSD)"
+
+    def _classifier_performance(self):
+        pass
 
     def train_test_split(self, percentage=1):
         '''
