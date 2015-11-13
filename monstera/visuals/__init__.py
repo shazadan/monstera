@@ -17,6 +17,17 @@ def draw_confusion_matrix(cm, target, title='Confusion matrix',
     Returns
     -------
     Nothing
+
+    Example
+    -------
+    # When running in IPython
+    %matplotlib inline
+    import pandas as pd
+    from sklearn.metrics import confusion_matrix
+    from monstera.visuals import draw_confusion_matrix
+
+    cm = confusion_matrix([0,1,1,1], [0,1,0,1])
+    draw_confusion_matrix(cm, pd.Series([0,0,1,1]), cell_text_color='white')
     """
 
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
