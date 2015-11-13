@@ -1,9 +1,24 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def draw_confusion_matrix(cm, target, title='Confusion matrix', cmap=plt.cm.Blues):
+def draw_confusion_matrix(cm, target, title='Confusion matrix',
+                          cmap=plt.cm.Blues,
+                          cell_text_color='red'):
+    """Draws a confusion matrix using matplotlib library
+
+    Parameters
+    ----------
+    cm : an sklearn confusion matrix
+    target: panda series representing class labels
+    title: title of diagram
+    cmap: matplotlib color code i.e. plt.cm.Blues
+    cell_text_color: color of text within a matrix cell
+
+    Returns
+    -------
+    Nothing
     """
-    """
+
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
@@ -18,6 +33,6 @@ def draw_confusion_matrix(cm, target, title='Confusion matrix', cmap=plt.cm.Blue
             plt.text(x, y, '%.0f' % cm[y, x],
                      horizontalalignment='center',
                      verticalalignment='center',
-                     color='red',
+                     color=cell_text_color,
                      fontsize=20
                      )

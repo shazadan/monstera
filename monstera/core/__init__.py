@@ -1,8 +1,8 @@
 __author__ = 'shazada nawaz'
 
-import pandas as pd
-
 from math import sqrt
+
+import pandas as pd
 from sklearn import cross_validation
 
 
@@ -33,7 +33,6 @@ class MLObject:
     def model_performance(self):
         self._regression_performance()
 
-
     def _regression_performance(self):
 
         error = []
@@ -62,11 +61,11 @@ class MLObject:
         target_variance = sum(target_deviation) / len(target_deviation)
         target_std_dev = sqrt(target_variance)
 
-        print "MSE: ", round(mse,4)
+        print "MSE: ", round(mse, 4)
         print "Target Variance (TV): ", round(target_variance, 4)
         print
         print "MAE: ", round(mae, 4)
-        print "RMSE: ", round(rmse,4)
+        print "RMSE: ", round(rmse, 4)
         print "Target Standard Deviation (TSD): ", round(target_std_dev, 4)
         print
         if rmse < target_std_dev:
